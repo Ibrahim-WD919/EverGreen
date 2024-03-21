@@ -1,0 +1,1992 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+} 
+body{
+    height: 600px;
+    width: 100%;
+    background-image:url(Garden\ 1st\ BG.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -1;
+    /* overflow: scroll; */
+}
+body:after{
+    content: "";
+    height: 750px;
+    width: 100%;
+    background-color: rgba(0, 55, 0, 0.728);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+body:before{
+    content: "";
+    height: 720px;
+    width: 60%;
+    background-color: rgba(0, 121, 0, 0.476);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.container{
+    
+}
+
+/* header */
+
+header{
+    display: flex;
+    justify-content: center;
+}
+nav{
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
+    /* top: 0; */
+    margin-top: 30px;
+    height: 80px;
+    width: 75%;
+    border-radius: 15px;
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+}
+.nav1{
+    width: 30%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.nav1 h1{
+    color: green;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+}
+.nav1 h1 span{
+    color:  rgb(236, 174, 2);
+}
+
+.nav2{
+    width: 70%;
+    /* background-color: rgb(138, 138, 138); */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav2 h2{
+    font-size: 13.5px;
+    font-weight: 550;
+    color: rgb(101, 101, 101);
+    cursor: pointer;
+}
+
+.nav2  h2{
+    position: relative;
+}
+.nav2  h2::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: green;
+    bottom: -4px;
+    left: 1px;
+    /* transform: translateX(50%); */
+    transition: width 0.5s;
+}
+.nav2  h2:hover::after{
+    width: 100%;
+}
+
+.nav2 .sdd1 h2{
+    position: relative;
+}
+
+.nav2 .sdd1 h2::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: green;
+    bottom: -4px;
+    left: 1px;
+    /* transform: translateX(50%); */
+    transition: width 0.5s;
+}
+.nav2 .sdd1 h2:hover::after{
+    width: 80%;
+}
+
+.nav2 .sdd2 h2{
+    position: relative;
+}
+.nav2 .sdd2 h2::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: green;
+    bottom: -4px;
+    left: 1px;
+    /* transform: translateX(50%); */
+    transition: width 0.5s;
+}
+.nav2 .sdd2 h2:hover::after{
+    width: 75%;
+}
+
+.nav2 .sdd3 h2{
+    position: relative;
+}
+.nav2 .sdd3 h2::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: green;
+    bottom: -4px;
+    left: 0px;
+    /* transform: translateX(50%); */
+    transition: width 0.5s;
+}
+.nav2 .sdd3 h2:hover::after{
+    width: 70%;
+}
+
+.sdd{
+    cursor: pointer;
+}
+/* Jquery */
+.sdd .ser{
+    color: green;
+    /* text-decoration: 1.5px underline green; */
+    /* border-bottom: 2px solid green; */
+}
+.sdd .nser{
+    color:rgb(101, 101, 101);
+    /* text-decoration: 1.5px underline rgba(0, 128, 0, 0); */
+    /* border-bottom: 2px solid rgba(0, 128, 0, 0); */
+}
+
+.sdd1 ul{
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    width: 180px;
+    margin-bottom: -72px;
+    position: absolute;
+    top: 120px;
+    left: 590px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* box-shadow: 0px 0px 5px rgb(0, 0, 0); */
+}
+.sdd2 ul{
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    width: 180px;
+    margin-bottom: -72px;
+    position: absolute;
+    top: 120px;
+    left: 680px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* box-shadow: 0px 0px 5px rgb(0, 0, 0); */
+}
+.sdd3 ul{
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    width: 180px;
+    margin-bottom: -72px;
+    position: absolute;
+    top: 120px;
+    left: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* box-shadow: 0px 0px 5px rgb(0, 0, 0); */
+}
+.sdd a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+    font-family: calibri;
+    color: rgb(96, 96, 96);
+}
+.sdd1 ul li{
+    display: none;
+    width: 90%;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    list-style-type: none;
+    line-height: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.sdd2 ul li{
+    display: none;
+    width: 90%;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    list-style-type: none;
+    line-height: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.sdd3 ul li{
+    display: none;
+    width: 90%;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    list-style-type: none;
+    line-height: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.sdd ul li:first-child{
+    margin-top: 25px;
+}
+.sdd ul li:last-child{
+    margin-bottom: 25px;
+}
+.sdd ul li:hover{
+    border: 0.5px solid grey;
+    background-color: white;
+    letter-spacing: 1px;
+}
+.sdd ul li:hover a{
+    color: rgb(0, 148, 0);
+}
+.nav2 button{
+    padding: 9px 18px;
+    font-size: 14.5px;
+    font-weight: 700;
+    background-color: rgb(236, 174, 2);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    /* transition: all ease 0.5s; */
+}
+
+.nav2 button:active{
+    background-color: green;
+    scale: 0.95;
+}
+
+/* main */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero{
+    height: 80vh;
+    width: 75%;
+    display: flex;
+    align-items: center;
+}
+.hero .box{
+    width: 50%;
+    margin-left: 20px;
+}
+.hero .box h3{
+    color: white;
+    font-size: 16px;
+}
+.hero .box h1{
+    color: white;
+    font-size: 45px;
+    margin: 10px 0;
+    width: 80%;
+    font-family: calibri;
+}
+.hero .box h1 span{
+    color:  rgb(236, 174, 2);
+}
+.hero .box p{
+    color: white;
+    font-size: 13px;
+    font-family: calibri;
+}
+.hero .box .btn1{
+    margin: 15px 0;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: green;
+}
+.hero .box .btn1:active{
+    background-color: rgb(214, 157, 2);
+    color: rgb(255, 255, 255);
+}
+.hero .box .btn2:active{
+    background-color: rgba(255, 255, 255, 0.215);
+    color: rgb(255, 255, 255);
+}
+.hero .box .btn2{
+    background-color: transparent;
+    margin: 15px 0;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 25px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* hero2 */
+.hero2{
+    display: flex;
+    justify-content: center;
+}
+.featurebox{
+    border: none;
+    border-radius: 20px;
+    height: 230px;
+    width: 70%;
+    background-color: rgb(0, 54, 0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.fbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0px 15px;
+    
+    background-color: transparent;
+    border: none ;
+    border-radius: 10px;
+    width:  31%;
+    height: 200px;
+    color: white;
+}
+
+.fbox:hover{
+    background-color: white;
+    color: green;
+}
+.fbox  i{
+    font-size: 45px;
+    color: white;
+}
+.fbox:hover i{
+    color: green;
+}
+.fbox p{
+    font-size: 14px;
+    font-family: calibri;
+}
+.fbox:hover  p{
+    color: rgb(71, 71, 71);
+    font-weight: 900;
+}
+
+/* hero3 */
+.hero3{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(238, 238, 238); */
+    background-image: linear-gradient(transparent,rgb(235, 235, 235),rgb(235, 235, 235));
+    position: relative;
+    z-index: -3;
+    margin-top: 30px;
+}
+.hero3::before{
+    content: "";
+    height: 300px;
+    width: 800px;
+    position: absolute;
+    border-radius: 100% 50% ;
+    background-color:  rgb(235, 235, 235);
+    top: 245px;
+    left: -100px;
+    z-index: -1;
+}
+.hero3::after{
+    content: "";
+    height: 300px;
+    width: 900px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 80% 70%;
+    top: 355px;
+    right: 0px;
+    z-index: -2;
+}
+
+.left{
+    width:  35%;
+    height: 75%;
+    /* background-color: rgba(0, 255, 255, 0.571); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.left h2{
+    margin: 10px 0;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.left h5{
+    font-size: 10.5px;
+    font-weight: 700;
+    color: green;
+    margin-bottom: 10px;
+}
+.left h5 span{
+    color: rgb(102, 102, 102) ;
+}
+.left p{
+    font-size: 11.5px;
+    font-family: calibri;
+    font-weight: 900;
+    color: rgb(102, 102, 102);
+    margin-bottom: 15px;
+}
+.left button{
+    width: 80px;
+    padding: 8px 0;
+    background-color:  rgb(214, 157, 2);
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-family: calibri;
+    font-size: 12px;
+    font-weight: 800;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.right{
+    width:  35%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+}
+
+.right .rbox1{
+    position: relative;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 230px;
+    width:  370px;
+    background-color: rgb(120, 207, 129);
+}
+.right .rbox1 .cg1{
+    background-image: url(Cute\ Girl\ 123.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    filter: drop-shadow(8px 0px 5px rgba(0, 0, 0, 0.322));
+    background-position: bottom;
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    height: 210%;
+    width: 120%;
+}
+.right .rbox1:before{
+    content: "";
+    z-index: 3;
+    position: absolute;
+    border-radius: 30px;
+    border: none;
+    top: 25px ;
+    right: 260px;
+    height: 170px;
+    width:  170px;
+    background-image:url(Project\ Manipulationps.jpg) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 2px solid white;
+}
+.right .rbox1 .box0{
+    position: absolute;
+    z-index: 1;
+    bottom: -40px ;
+    height: 80px;
+    width:  150px;
+    right: 100px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgba(33, 33, 33, 0.212);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+.right .rbox1 .box0 h2{
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
+    color: green;
+}
+.right .rbox1 .box0 p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11px;
+    font-weight: 900;
+    color: rgb(82, 82, 82);
+}
+
+/* hero4 */
+.hero4{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    margin-top: 50px;
+}
+.hero4 h1{
+    border: 1px solid rgba(160, 160, 160, 0.26);
+    border-radius: 10px;
+    padding: 5px 15px;
+    color: rgb(0, 105, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+/* hero5 */
+.hero5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    width: 100%;
+}
+.hero5 p{
+    font-family: arial;
+    font-size: 12px;
+    font-weight: 700;
+    color: green;
+}
+.hero5 h3{
+    font-family: arial;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* hero6 */
+.hero6{
+    display: flex;
+    justify-content: center;
+    /* gap: 150px; */
+    align-items: center;
+    height: 300px;
+    width: 100%;
+}
+.hero6 .lt{
+    height: 250px;
+    width: 200px;
+    border: 1px solid rgba(160, 160, 160, 0.199);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.hero6 .lt:hover{
+    transform: scale(0.9);
+    border: 1px solid green;
+}
+.hero6 .lt:hover button{
+    transform: scale(1.3);
+    background-color: green;
+}
+.hero6 .lt1{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.hero6 .lt4{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.hero6 .circle{
+    height: 70px;
+    width:  70px;
+    border-radius: 100%;
+    background-color: rgba(48, 215, 76, 0.518);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero6 .circle i{
+    font-size: 35px;
+    color: rgb(0, 97, 0);
+}
+
+.hero6 h1{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: calibri;
+    line-height: 20px;
+}
+.hero6 p{
+    text-align: center;
+    color: grey;
+    font-size: 12px;
+    font-weight: 900;
+    font-family: calibri;
+}
+.hero6 button{
+    position: relative;
+    top: 33px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 5px 10px;
+    background-color: rgb(214, 157, 2) ;
+}
+
+/* hero7 */
+.hero7{
+    height: 1100px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    /* background-image:repeating-linear-gradient(90deg,rgba(255, 255, 162, 0.301),rgba(255, 255, 162, 0.301) 20px,rgba(255, 255, 139, 0.39) 20px,rgba(255, 255, 139, 0.39) 40px) ; */
+}
+.hero7 .glrtopic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    width: 100%;
+}
+.hero7 .glrtopic p{
+    font-family: arial;
+    font-size: 12px;
+    font-weight: 700;
+    color: green;
+}
+.hero7 .glrtopic h3{
+    font-family: arial;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.hero7 .grlbox{
+    height: 665px;
+    width: 72%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.hero7 .grlbox .glr{
+    height: 290px;
+    width: 260px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    display: flex;
+    /* justify-content: start; */
+    align-items: center;
+    flex-direction: column;
+}
+.hero7 .grlbox .glr:hover{
+    transform: scale(1.05);
+}
+.hero7 .grlbox .glr .img{
+    height: 60%;
+    width:  100%;
+}
+.hero7 .grlbox .glr .img1{
+    background-image: url(a1.jpg);
+    background-size: cover;
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.hero7 .grlbox .glr .img2{
+    background-image: url(a2.jpg);
+    background-size: cover;
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.hero7 .grlbox .glr .img3{
+    background-image: url(a3.jpg);
+    background-size: cover;
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.hero7 .grlbox .glr .img4{
+    background-image: url(a4.jpg);
+    background-size: cover;
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.hero7 .grlbox .glr .img5{
+    background-image: url(a5.jpg);
+    background-size: cover;
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.hero7 .grlbox .glr .img6{
+    background-image: url(a6.jpg);
+    background-size: cover;
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.hero7 .grlbox .glr .txt{
+    height: 40%;
+    width:  100%;
+    border-top: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    text-align: center;
+    padding: 0 20px;
+}
+.hero7 .grlbox .glr .txt h3{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: calibri;
+    line-height: 20px;
+}
+.hero7 .grlbox .glr .txt p{
+    color: rgb(95, 95, 95);
+    font-size: 11.5px;
+    line-height: 16px;
+    font-weight: 600;
+    font-family: arial;
+}
+.hero7 button{
+    /* width: 80px; */
+    padding:12px 12px;
+    background-color:  rgb(214, 157, 2);
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-family: calibri;
+    font-size: 13px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+.hero7 button:hover{
+    background-color: green;
+}
+
+/* hero8 */
+.hero8{
+    height: 600px;
+    width: 100%;
+    background-image:linear-gradient(rgba(0, 78, 0, 0.555),rgba(0, 161, 0, 0.479)),url(Garden\ 2nd\ Bg.jpg) ;
+    border-bottom-left-radius:  30%;
+    border-bottom-right-radius: 30%;
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    border: none;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+}
+
+.sleft{
+    width:  40%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sleft .rbox1{
+    position: relative;
+    top: 40px ;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 230px;
+    width:  380px;
+    background-color: rgb(120, 207, 128);
+}
+
+.sleft .rbox1::before{
+    content: "";
+    position: absolute;
+    bottom: 0 ;
+    left: 30px;
+    border: none;
+    height: 600px;
+    width:  350px;
+    background-image: url(Cute\ Boy\ 2nd.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    filter: drop-shadow(-8px 0px  5px rgba(0, 0, 0, 0.253));
+}
+
+.hero8 .sright{
+    width:  40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.sright h2{
+    margin: 10px 0;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sright h5{
+    font-size: 10.5px;
+    font-weight: 700;
+}
+
+.sright p{
+    font-size: 11px;
+    font-family: calibri;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+.sright .check{
+    width: 250px;
+}
+.sright .check p{
+    display: inline-block;
+    margin-right: 30px;
+}
+.sright .check p:last-child{
+    margin-left: 10px;
+}
+.sright button{
+    width: 90px;
+    padding: 9px 0;
+    background-color:  rgb(214, 157, 2);
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-family: calibri;
+    font-size: 12px;
+    font-weight: 800;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.sright button:hover{
+    background-color: rgb(0, 148, 0);
+}
+
+.grnbox{
+    background-color: rgb(0, 90, 0);
+    width: 70%;
+    height: 120px;
+    border-radius: 20px;
+    border: none;
+    position:absolute;
+    bottom: -60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mb h3::selection{
+    background-color: rgb(30, 128, 0);
+}
+.mb p::selection{
+    background-color: rgb(30, 128, 0);
+}
+.mb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    /* background-color: red; */
+    height: 50%;
+    width: 25%;
+    border-left: 1px solid rgb(36, 122, 36);
+}
+.mb h3{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+}
+.mb p{
+    font-size: 13px;
+    font-family: calibri;
+    font-weight: 800;
+}
+
+/* hero9 */
+.hero9{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* text-align: center; */
+    height: 630px;
+    width: 100%;
+    margin-top: 100px;
+    flex-direction: column;
+}
+.collagecontent{
+    width: 70%;
+    height: 120px;
+    display: flex;
+}
+.hero9 .collagecontent .tleft{
+    width: 50%;
+    text-align: left;
+}
+.hero9 .collagecontent .tleft p{
+    font-family: arial;
+    font-size: 12px;
+    font-weight: 700;
+    color: green;
+}
+.hero9 .collagecontent .tleft  h3{
+    font-family: arial;
+    font-size: 28px;
+    font-weight: 700;
+}
+.hero9 .collagecontent .tright{
+    width: 50%;
+    text-align: left;
+}
+.hero9 .collagecontent .tright p{
+    font-family: calibri;
+    font-size: 12px;
+    font-weight: 700;
+    color: rgb(61, 61, 61);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.hero9 .collagecontent button{
+    padding:9px 10px;
+    background-color:  rgb(214, 157, 2);
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-family: calibri;
+    font-size: 11.5px;
+    font-weight: 800;
+}
+.hero9 .collagecontent button:hover{
+    background-color: green;
+}
+
+.hero9 .collage{
+    width: 70%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.hero9 .collage .clgbox{
+    width: 270px;
+    height: 220px;
+    /* border: 1px solid grey; */
+    border-radius: 20px;
+}
+.hero9 .collage .clgbox1{
+    background-image: url(a4.jpg);
+    background-size: cover;
+}
+.hero9 .collage .clgbox2{
+    background-image: url(a6.jpg);
+    background-size: cover;
+}
+.hero9 .collage .clgbox3{
+    background-image: url(a2.jpg);
+    background-size: cover;
+}
+.hero9 .collage .clgbox4{
+    background-image: url(a1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.hero9 .collage .clgbox5{
+    background-image: url(a3.jpg);
+    background-size: cover;
+}
+.hero9 .collage .clgbox6{
+    background-image: url(a5.jpg);
+    background-size: cover;
+}
+.hero9 .collage .clgbox:hover{
+    transform: scale(1.05);
+    /* background-color: green; */
+ }
+
+/* hero10 */
+.hero10{
+    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    /* background-image:repeating-linear-gradient(90deg,rgba(255, 255, 162, 0.301),rgba(255, 255, 162, 0.301) 20px,rgba(255, 255, 139, 0.39) 20px,rgba(255, 255, 139, 0.39) 40px) ; */
+    /* background: rgba(7, 180, 238, 0.904); */
+    position: relative;
+}
+.hero10::before{
+    content: "";
+    position: absolute;
+    height: 380px;
+    width: 100%;
+    background-color: rgb(0, 108, 0);
+    bottom: -100px;
+    z-index: -1;
+    border: none;
+    /* border-radius: 100%; */
+}
+.hero10::after{
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    background-color: white;
+    top: 250px;
+    z-index: -1;
+    border: none;
+    border-radius: 45%;
+    /* border: 2px solid; */
+}
+
+.hero10 .glrtopic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    width: 100%;
+}
+.hero10 .glrtopic p{
+    font-family: arial;
+    font-size: 12px;
+    font-weight: 700;
+    color: green;
+}
+.hero10 .glrtopic h3{
+    font-family: arial;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.hero10 .grlbox{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.hero10 .grlbox .glr{
+    height: 370px;
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.hero10 .grlbox .glr .img{
+    height: 70%;
+    width:  100%;
+    border-bottom: 1px solid grey;
+}
+.hero10 .grlbox .glr .img1{
+    background-image: url(b1.jpg);
+    background-size: cover;
+    border: none;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.hero10 .grlbox .glr .img2{
+    background-image: url(b2.jpg);
+    background-size: cover;
+    border: none;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.hero10 .grlbox .glr .img3{
+    background-image: url(b3.jpg);
+    background-size: cover;
+    border: none;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.hero10 .grlbox .glr .img4{
+    background-image: url(b4.jpg);
+    background-size: cover;
+    border: none;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.hero10 .grlbox .glr .img:hover{
+    transform: scale(1.1)translateY(-12px);
+}
+.hero10 .grlbox .glr .txt{
+    height: 29%;
+    width:  100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.hero10 .grlbox .glr .txt h3{
+    font-size: 26px;
+    font-family: calibri;
+    line-height: 25px;
+}
+.hero10 .grlbox .glr .txt p{
+    font-size: 18px;
+    font-weight: 800;
+    font-family: calibri;
+    color: grey;
+}
+.hero10 .grlbox .glr .txt i{
+    content: "";
+    font-size: 30px;
+    display: inline;
+    color: rgb(25, 106, 0);
+    margin: 0 2px;
+    padding: 3px 5.4px;
+    border-radius: 3px;
+    box-shadow: 0 0 6px rgba(0, 54, 3, 0.756);
+    background-color: white;
+    height: 33px;
+    position: relative;
+    top: 50%;
+    cursor: pointer;
+}
+.hero10 .grlbox .glr .txt i:active{
+    font-size: 25px;
+}
+
+/* hero11 */
+.hero11{
+    background-color:rgb(0, 108, 0);
+    /* border-bottom-left-radius:  50%; */
+    /* border-bottom-right-radius: 30%; */
+    height: 450px;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding-top: 30px;
+    margin-bottom: 50px;
+    position: relative;
+    
+}
+.hero11::after{
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    background-color:rgb(0, 108, 0);
+    top: 340px;
+    /* z-index: 1; */
+    border: none;
+    border-radius: 45%;
+    /* border-bottom-right-radius: 45%; */
+    /* border-bottom-left-radius: 45%; */
+    /* border: 2px solid; */
+}
+
+.hero11 .signuptopic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    width: 60%;
+    padding:10px 8px;
+}
+.hero11 .signuptopic h4{
+    font-family: arial;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+}
+.hero11 .signuptopic h3{
+    font-family: arial;
+    font-size: 30px;
+    font-weight: 700;
+    color:white;
+    margin: 5px 0;
+}
+.hero11 .signuptopic p{
+    font-family: calibri;
+    font-size: 16px;
+    font-weight: 500;
+    color:white;
+    margin-bottom: 10px;
+}
+.hero11 .signupbox{
+    height: 380px;
+    width: 580px;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    bottom: -180px;
+    z-index: 2;
+    box-shadow: 0 0 5px rgba(20, 20, 20, 0.303);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero11 .signupbox .puts{
+    width: 520px;
+    display: flex;
+    justify-content: space-between;
+}
+.hero11 .signupbox input[type="text"]{
+    padding: 12px 12px;
+    border: 2px solid rgba(128, 128, 128, 0.593);
+    border-radius: 10px;
+    width: 250px;
+}
+.hero11 .signupbox input[type="email"]{
+    padding: 12px 12px;
+    border: 2px solid rgba(128, 128, 128, 0.593);
+    border-radius: 10px;
+    width: 250px;
+}
+.hero11 .signupbox input:focus{
+    border: 2px solid green;
+    outline: green;
+}
+.hero11 .signupbox select{
+    color: grey;
+    width:520px;
+    padding: 10px 12px;
+    border: 2px solid rgba(128, 128, 128, 0.593);
+    border-radius: 10px;
+}
+.hero11 .signupbox select:focus{
+    border: 2px solid green;
+    outline: green;
+}
+.hero11 .signupbox .msg{
+    position: relative;
+}
+.hero11 .signupbox textarea{
+    width: 520px;
+    padding: 12px 12px;
+    border: 2px solid rgba(128, 128, 128, 0.593);
+    border-radius: 10px;
+}
+.hero11 .signupbox .cr{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    text-align: right;
+}
+.hero11 .signupbox .cr small{
+    font-family:calibri ;
+    /* font-weight: 700; */
+    font-size: 12.5px;
+    color: grey;
+}
+.hero11 .signupbox .cr span{
+    font-family:Arial, Helvetica, sans-serif ;
+    font-weight: 700;
+    font-size: 11.5px;
+    color: grey;
+}
+.hero11 .signupbox textarea:focus{
+    border:2px solid green;
+    outline: green;
+}
+.hero11 .signupbox button{
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 14px;
+    background-color: rgb(214, 157, 2) ;
+}
+.hero11 .signupbox button:active{
+    background: green;
+}
+
+/* hero12 */
+.hero12{
+    background-color:  rgba(183, 216, 237, 0.411);
+    height: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.hero12::before{
+    content: "";
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: -150px;
+    z-index: -3;
+    background-color:   rgba(183, 216, 237, 0.411);
+}
+.hero12 .ratebox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.hero12 .ratebox .fleft{
+    width:50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content : center;
+    gap: 30px;
+    padding-top: 70px;
+}
+.hero12 .ratebox .fleft .rbox{
+    height: 220px;
+    width: 275px;
+    background-color: green;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.452);
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+.hero12 .ratebox .fleft .rbox1 .dp{
+    height: 80px;
+    width:  80px;
+    background-color: white;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-image: url(r1.jpg);
+    background-size: 130%;
+    background-position: top;
+}
+.hero12 .ratebox .fleft .rbox2 .dp{
+    height: 80px;
+    width:  80px;
+    background-color: white;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-image: url(r2.png);
+    background-size: 100%;
+    background-position: center;
+}
+.hero12 .ratebox .fleft .rbox3 .dp{
+    height: 80px;
+    width:  80px;
+    background-color: white;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-image: url(r3.jpg);
+    background-size: 150%;
+    background-position: center;
+}
+.hero12 .ratebox .fleft .rbox4 .dp{
+    height: 80px;
+    width:  80px;
+    background-color: white;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-image: url(r4.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+.hero12 .ratebox .fleft .rbox1{
+    background-color: white;
+    margin-top: 20px;
+}
+.hero12 .ratebox .fleft .rbox2{
+    margin-top: -20px;
+}
+.hero12 .ratebox .fleft .rbox4{
+    background-color: white;
+    margin-top: -40px;
+}
+
+.hero12 .ratebox .fright{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.hero12 .fright h4{
+    font-family: arial;
+    font-size: 15px;
+    font-weight: 700;
+    color: green;
+}
+.hero12 .fright h3{
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 37px;
+    font-weight: 700;
+    color:black;
+}
+.hero12 .fright p{
+    font-family: calibri;
+    font-size: 16px;
+    font-weight: 500;
+    color:grey;
+    margin-bottom: 15px;
+}
+.hero12 .fright small{
+    font-size: 12px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.hero12 .fright input{
+    width:250px;
+}
+.hero12 .fright input[type=range]{
+    accent-color: green;
+}
+
+.hero12 .fright button{
+    width: 120px;
+    padding: 10px 0;
+    background-color:  rgb(214, 157, 2);
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-family: calibri;
+    font-size: 13px;
+    font-weight: 800;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.hero12 .fright button:hover{
+    background-color: green;
+}
+
+/* hero13 */
+.hero13{
+    background-color: white;
+    height: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hero13 .substopic{
+    width: 68%;
+    display: flex;
+    align-items: center;
+    height: 15%;
+}
+.hero13 .substopic .subsleft{
+    width: 50%;
+}
+.hero13 .substopic .subsright{
+    width: 50%;
+}
+.hero13 .substopic h4{
+    font-family: arial;
+    font-size: 15px;
+    font-weight: 700;
+    color: green;
+}
+.hero13 .substopic h3{
+    font-family:Arial;
+    font-size: 37px;
+    font-weight: 700;
+    color:black;
+}
+.hero13 .substopic p{
+    font-family: calibri;
+    font-size: 14px;
+    font-weight: 500;
+    color:grey;
+    margin-bottom: 15px;
+}
+.hero13 .business{
+    height: 75%;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.hero13 .business .bzbox{
+    height: 90%;
+    width: 30%;
+    border: 2px dashed grey;
+    border-radius: 20px;
+}
+.hero13 .business .bzbox:hover{
+    transform: translatey(-20px);
+    box-shadow: 0 0 10px rgb(125, 125, 125);
+}
+.hero13 .business .bzbox .tbox{
+    width: 100%;
+    height: 20%;
+    background-color: rgba(128, 128, 128, 0.117);
+    border-top-right-radius:18px ;
+    border-top-left-radius:18px ;
+    border: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero13 .business .bzbox .tbox h1{
+    font-size: 25px;
+}
+.hero13 .business .bzbox .tbox p{
+    font-size: 15.5px;
+    letter-spacing: 0.4px;
+    font-family: calibri;
+    font-weight: 550;
+    color: grey;
+}
+.hero13 .business .bzbox .cbox{
+    width: 100%;
+    height: 80%;
+    /* background-color: yellow; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.hero13 .business .bzbox .cbox h1 sup {
+    font-size: 15px;
+    /* color: red; */
+}
+.hero13 .business .bzbox .cbox h1{
+    font-size: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hero13 .business .bzbox .cbox p{
+    height: 30px;
+    width: 80%;
+    color: grey;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.638);
+    font-size: 17px;
+    font-weight: 600;
+    font-family: calibri;
+}
+.hero13 .business .bzbox .cbox button{
+    font-size: 16px;
+    background-color: rgb(214, 157, 2) ;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+.hero13 .business .bzbox .cbox button:active{
+    transform: scale(0.95);
+}
+.hero13 .business .bzbox .cbox small{
+    font-size: 13px;
+    font-weight: 900;
+    color: grey;
+    font-family: calibri;
+}
+
+/* hero14 */
+.hero14{
+    background-color: rgb(16, 132, 16);
+    height: 400px;
+    width: 100%;
+
+}
+.ffleft::before{
+    content: "";
+    left: 78%;
+    top: 20%;
+    position: absolute;
+    height: 370px;
+    width: 310px;
+    background-image: url(r1.jpg);
+    background-size: cover;
+    background-position: center;
+    border: none;
+    border-radius: 20px;
+}
+.ffleft{
+    position: relative;
+    padding: 0 200px;
+    width:  70%;
+    height: 100%;
+    /* background-color: rgba(0, 255, 255, 0.571); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: rgb(0, 94, 0);
+}
+.ffleft h2{
+    margin: 10px 0;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ffleft h5{
+    font-size: 14px;
+    font-weight: 900;
+    font-family:calibri;
+}
+
+.ffleft p{
+    font-size: 11.5px;
+    font-family: calibri;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+.ffleft button{
+    width: 115px;
+    padding: 10px 0;
+    background-color:  rgb(214, 157, 2);
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+
+/* hero15 */
+.hero15{
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-image:repeating-linear-gradient(90deg,rgba(255, 255, 162, 0.301),rgba(255, 255, 162, 0.301) 20px,rgba(255, 255, 139, 0.39) 20px,rgba(255, 255, 139, 0.39) 40px) ; */
+}
+.hero15 .glrtopic{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    width: 75%;
+}
+.hero15 .glrtopic p{
+    font-family: arial;
+    font-size: 13px;
+    font-weight: 800;
+    color: green;
+}
+.hero15 .glrtopic h3{
+    font-family: arial;
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.hero15 .grlbox{
+    height: 400px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+.hero15 .grlbox .glr{
+    height: 310px;
+    width: 260px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    display: flex;
+    /* justify-content: start; */
+    align-items: center;
+    flex-direction: column;
+}
+.hero15 .grlbox .glr .img{
+    height: 57%;
+    width:  100%;
+}
+.hero15 .grlbox .glr .img{
+    background-image: url(c1.jpg);
+    background-size: cover;
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.hero15 .grlbox .glr .img2{
+    background-image: url(c3.jpg);
+    background-size: cover;
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.hero15 .grlbox .glr .img3{
+    background-image: url(c2.jpg);
+    background-size: cover;
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.hero15 .grlbox .glr .txt{
+    height: 43%;
+    width:  100%;
+    border-top: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+}
+.hero15 .grlbox .glr .txt h3{
+    text-align: center;
+    font-size: 19px;
+    font-weight: 900;
+    font-family: calibri;
+    line-height: 20px;
+
+}
+.hero15 .grlbox .glr .txt small {
+    color: rgb(77, 77, 77);
+    font-size: 11px;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hero15 .grlbox .glr:hover small{
+    color: rgb(0, 97, 0);
+}
+.hero15 .grlbox .glr .txt p{
+    color: rgb(107, 107, 107);
+    font-size: 10.5px;
+    line-height: 15px;
+    font-weight: 600;
+    font-family: arial;
+}
+
+
+/* hero16 */
+.herolast{
+    position: relative;
+    background-color: rgb(0, 79, 3);
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lastbox{
+    height: 70%;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.lsbox1{
+    height: 90%;
+    width: 30%;
+    background-color: rgba(0, 166, 0, 0.701);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    padding: 10px 20px;
+}
+.lsbox1 h1{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.lsbox1 p{
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+}
+.lsbox1 h5{
+    font-size: 12px;
+    font-weight: 800;
+    font-family: arial;
+}
+.lsbox1 .social i{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.lsbox2{
+    height: 90%;
+    width: 15%;
+    color: white;
+    padding: 12px 0;
+}
+.lsbox2 h2{
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.lsbox2 a{
+    line-height: 32px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+}
+.lsbox2 i ,.lsbox3 i{
+    font-size: 20px;
+    padding: 4px 0 0 0;
+}
+.lsbox3{
+    height: 90%;
+    width: 15%;
+    color: white;
+    padding: 12px 0;
+}
+.lsbox3 h2{
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.lsbox3 p{
+    font-size: 13.2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    margin: 10px 0 5px 0;
+}
+.lsbox3 a{
+    line-height: 32px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+}
+.lsbox3 a:hover{
+    text-decoration: 1px underline white;
+    cursor: pointer;
+}
+
+.lsbox4{
+    height: 90%;
+    width: 30%;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: start;
+    gap: 15px;
+    padding: 12px 20px;
+}
+.lsbox4 h2{
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.lsbox4 p{
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+}
+.lsbox4 input[type="email"]{
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: arial;
+    font-weight: 700;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    padding: 0 15px;
+}
+.lsbox4 button{
+    font-size: 14px;
+    font-family: arial;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color:   rgba(0, 166, 0, 0.701);
+    color: white;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+}
+.lsbox4 button:active{
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 15px;
+    border: 1px solid white;
+}
+
+.herolast small{
+    position: absolute;
+    bottom: 30px;
+}
+.herolast small a{
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 11px;
+    color: white;
+    text-decoration: none;
+    background-color: green;
+    padding: 6px 8px;
+}
+
+.dropshadow{
+
+    height: 300px;
+    width:  300px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 20px 20px 60px black;
+}
+
+
